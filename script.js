@@ -148,36 +148,36 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Touch gestures for mobile
-let touchStartX = 0;
-let touchEndX = 0;
+// let touchStartX = 0;
+// let touchEndX = 0;
 
-document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-});
+// document.addEventListener('touchstart', (e) => {
+//     touchStartX = e.changedTouches[0].screenX;
+// });
 
-document.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-});
+// document.addEventListener('touchend', (e) => {
+//     touchEndX = e.changedTouches[0].screenX;
+//     handleSwipe();
+// });
 
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const swipeDistance = touchEndX - touchStartX;
+// function handleSwipe() {
+//     const swipeThreshold = 50;
+//     const swipeDistance = touchEndX - touchStartX;
     
-    if (Math.abs(swipeDistance) > swipeThreshold) {
-        if (swipeDistance > 0 && !sidebar.classList.contains('active')) {
-            // Swipe right - open sidebar
-            leftMenuButton.classList.add('active');
-            sidebar.classList.add('active');
-            document.body.classList.add('sidebar-open');
-        } else if (swipeDistance < 0 && sidebar.classList.contains('active')) {
-            // Swipe left - close sidebar
-            leftMenuButton.classList.remove('active');
-            sidebar.classList.remove('active');
-            document.body.classList.remove('sidebar-open');
-        }
-    }
-}
+//     if (Math.abs(swipeDistance) > swipeThreshold) {
+//         if (swipeDistance > 0 && !sidebar.classList.contains('active')) {
+//             // Swipe right - open sidebar
+//             leftMenuButton.classList.add('active');
+//             sidebar.classList.add('active');
+//             document.body.classList.add('sidebar-open');
+//         } else if (swipeDistance < 0 && sidebar.classList.contains('active')) {
+//             // Swipe left - close sidebar
+//             leftMenuButton.classList.remove('active');
+//             sidebar.classList.remove('active');
+//             document.body.classList.remove('sidebar-open');
+//         }
+//     }
+// }
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
